@@ -7,11 +7,13 @@ Sunshine管理
 软件架构说明
 
 
-#### 安装教程
+#### 使用软件
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  Hbuilder X
+2.  vscode
+3.  微信开发者工具
+4.
+5.
 
 #### 使用说明
 
@@ -26,6 +28,18 @@ Sunshine管理
 3.  提交代码
 4.  新建 Pull Request
 
+#### 简单使用
+
+1.  git clone https://gitee.com/yourname/repository
+2.  #Gitee
+    $ cd d:/test //首先在文件系统中创建一个项目文件夹，然后在Git中 cd 到这个工程目录
+    $ git init //初始化本地项目
+    $ git remote add origin <远程仓库地址> //绑定远程仓库
+3.  git add .    //指定更新内容    . 表示全部更新，test.txt 表示更新指定文件
+    git commit -m "一些注释说明"     //添加更新说明
+    git push origin master            //执行更新操作
+4.  $ cd d:/test
+    $ git pull origin master
 
 #### 特技
 
