@@ -49,6 +49,7 @@ Sunshine管理
 4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
 5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
 6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+<<<<<<< HEAD
 ——————————
 #### 此版本说明：
 1. home页面作为主页，即登录成功后呈现的页面
@@ -56,3 +57,5 @@ Sunshine管理
 3. 未知功能暂且仍在设计中，未构思好设计的功能
 4. 新增SCSS文件夹作为样式表储存地址
 5. global.scss为首页通用部分样式表
+=======
+>>>>>>> 6626a96fd85c3c6997a963c421e7f24db65dd6e3
