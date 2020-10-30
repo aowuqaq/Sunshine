@@ -1,0 +1,166 @@
+<template>
+	<!--顶部模块-->
+	<view class="title">
+		<view>
+			<!--未知功能-->
+			<button></button>
+			<image></image>
+		</view>
+		<view>
+			<!--跳转至活动页面-->
+			<button></button>
+			<text>活动</text>
+		</view>
+		<view>
+			<!--文章页面亦是首页-->
+			<button></button>
+			<text>文章</text>
+		</view>
+		<view>
+			<!--跳转至订阅界面-->
+			<button></button>
+			<text>订阅</text>
+		</view>
+		<view>
+			<!--跳转至搜索界面-->
+			<button></button>
+			<image></image>
+		</view>
+	</view>
+	<!--主题页面-->
+	<view class="total">
+		<view>
+			<!--活动图片滚动-->
+			<view>
+				<!--活动图片1-->
+				<!--之后会引向新界面-->
+				<button></button>
+				<image></image>
+			</view>
+			<view>
+				<!--活动图片2-->
+				<!--之后会引向新界面-->
+				<button></button>
+				<image></image>
+			</view>
+			<view>
+				<!--活动图片3-->
+				<!--之后会引向新界面-->
+				<button></button>
+				<image></image>
+			</view>
+		</view>
+		<view>
+			<!--文章导航1-->
+			<view>
+				<!--配图1-->
+				<image></image>
+			</view>
+			<view>
+				<!--发布时间1-->
+				<text></text>
+			</view>
+			<view>
+				<!--标题1-->
+				<text></text>
+			</view>
+			<view>
+				<!--作者1-->
+				<text></text>
+			</view>
+			<view>
+				<!--阅读数1-->
+				<text></text>
+			</view>
+		</view>
+
+		<view>
+			<!--文章导航2-->
+			<view>
+				<!--配图2-->
+				<image></image>
+			</view>
+			<view>
+				<!--发布时间2-->
+				<text></text>
+			</view>
+			<view>
+				<!--标题2-->
+				<text></text>
+			</view>
+			<view>
+				<!--作者2-->
+				<text></text>
+			</view>
+			<view>
+				<!--阅读数2-->
+				<text></text>
+			</view>
+		</view>
+		
+		<view>
+			<!--文章导航3-->
+			<view>
+				<!--配图3-->
+				<image></image>
+			</view>
+			<view>
+				<!--发布时间3-->
+				<text></text>
+			</view>
+			<view>
+				<!--标题3-->
+				<text></text>
+			</view>
+			<view>
+				<!--作者3-->
+				<text></text>
+			</view>
+			<view>
+				<!--阅读数3-->
+				<text></text>
+			</view>
+		</view>
+		
+	</view>
+	<!--底部模块-->
+	<view class="indo">
+		<!--底部小视窗-->
+		<view>
+			<!--首页界面-->
+			<button></button>
+			<text>首页</text>
+		</view>
+		
+		<view>
+			<!--跳转至树洞界面-->
+			<button></button>
+			<text>树洞</text>
+		</view>
+		
+		<view>
+			<!--跳转至发布界面-->
+			<button></button>
+			<text>发布</text>
+		</view>
+		
+		<view>
+			<!--跳转至书信界面-->
+			<button></button>
+			<text>书信</text>
+		</view>
+		
+		<view>
+			<!--跳转至我的界面-->
+			<button></button>
+			<text>我的</text>
+		</view>
+	</view>
+</template>
+
+<script>
+</script>
+
+<style lang="scss" scoped>
+	@import 'global'
+</style>

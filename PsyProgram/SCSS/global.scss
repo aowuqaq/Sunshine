@@ -1,0 +1,42 @@
+/*文字基本颜色*/
+$fontcolor=#000000 ;
+$fontsize= px;
+/*背景底色*/
+$bgcolor1=#000000 ;
+$bgcolor2=#000000 ;
+$bgcolor3=#000000 ;
+/*选定选项的颜色*/
+
+/*顶部样式*/
+.title{
+	position: absolute;
+	height: px;
+	width: 100%;
+	background-color: $bgcolor1;
+	text-align: center;
+	font-size: ;
+	font-weight: ;
+}
+.total{
+	background-color: $bgcolor2;
+	position: absolute;
+}
+.indo{
+	position: absolute;
+	height: px;
+	width: 100%;
+	}
+.in{
+	position: absolute;
+	height: 100%;
+	width: ;
+}
+.message{
+	position: absolute;
+	height: 100%;
+	
+}
+.bgimg{
+	position: absolute;
+	height: 100%;
+}
