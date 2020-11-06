@@ -57,8 +57,7 @@ page.data-v-b237504c {
 .header image.data-v-b237504c {
   width: 150rpx;
   height: 150rpx;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   margin-bottom: 2%;
 }
 .header text.data-v-b237504c {
@@ -126,8 +125,7 @@ page.data-v-b237504c {
           justify-content: center;
   margin-left: 30rpx;
   margin-right: 30rpx;
-  -webkit-border-radius: 0;
-          border-radius: 0;
+  border-radius: 0;
 }
 button text.data-v-b237504c {
   color: #6980C5;
