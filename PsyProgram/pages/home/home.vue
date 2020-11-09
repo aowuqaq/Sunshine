@@ -62,75 +62,92 @@
 				</view>
 			</view>
 			<view class="articles">
+				<view>
+					<button>
+						<view class="article">
+						<!--文章导航-->
+						<view>
+							<view class="article-picture">
+
+								<!--发布时间-->
+								<text>33分钟前</text>
+
+							</view>
+							<view class="blank"></view>
+							<view class="information">
+								<view class="article-title">
+									<!--标题-->
+									<text>互联网时代：灵魂的归属与栖息之地在何处</text>
+								</view>
+								<view class="blank1"></view>
+								<view class="article-information">
+									<view class="article-author">
+										<!--作者-->
+										<text>吴怼怼</text>
+									</view>
+									<view class="blank2"></view>
+									<view class="article-reader">
+										<!--阅读数-->
+										<text>12K</text>
+									</view>
+								</view>
+							</view>
+						</view>
+						</view>
+					</button>
+				</view>
+
 				<view class="article">
-					<!--文章导航1-->
+					<!--文章导航-->
 					<view class="article-picture">
-						<!--配图1-->
+						<!--配图-->
 						<image></image>
+
+						<view class="article-time">
+							<!--发布时间-->
+							<text></text>
+						</view>
 					</view>
-					<view class="article-time">
-						<!--发布时间1-->
-						<text></text>
-					</view>
-					<view class="article-title">
-						<!--标题1-->
-						<text></text>
-					</view>
-					<view class="article-author">
-						<!--作者1-->
-						<text></text>
-					</view>
-					<view class="article-reader">
-						<!--阅读数1-->
-						<text></text>
+					<view>
+						<view class="article-title">
+							<!--标题-->
+							<text></text>
+						</view>
+						<view class="article-author">
+							<!--作者-->
+							<text></text>
+						</view>
+						<view class="article-reader">
+							<!--阅读数-->
+							<text></text>
+						</view>
 					</view>
 				</view>
 
 				<view class="article">
-					<!--文章导航2-->
+					<!--文章导航-->
 					<view class="article-picture">
-						<!--配图2-->
+						<!--配图-->
 						<image></image>
-					</view>
-					<view class="article-time">
-						<!--发布时间2-->
-						<text></text>
-					</view>
-					<view class="article-title">
-						<!--标题2-->
-						<text></text>
-					</view>
-					<view class="article-author">
-						<!--作者2-->
-						<text></text>
-					</view>
-					<view class="article-reader">
-						<!--阅读数2-->
-						<text></text>
-					</view>
-				</view>
 
-				<view class="article">
-					<!--文章导航3-->
-					<view class="article-picture">
-						<!--配图3-->
-						<image></image>
+						<view class="article-time">
+							<!--发布时间-->
+							<text></text>
+						</view>
 					</view>
-					<view class="article-time">
-						<!--发布时间3-->
-						<text></text>
-					</view>
-					<view class="article-title">
-						<!--标题3-->
-						<text></text>
-					</view>
-					<view class="article-reader">
-						<!--作者3-->
-						<text></text>
-					</view>
-					<view class="article-reader">
-						<!--阅读数3-->
-						<text></text>
+					<view>
+						<view class="article-title">
+							<!--标题-->
+							<text></text>
+						</view>
+						<view class="article-author">
+							<!--作者-->
+							<text></text>
+						</view>
+						<view class="article-reader">
+							<!--阅读数-->
+							<text></text>
+						</view>
 					</view>
 				</view>
 			</view>
@@ -260,43 +277,98 @@
 	}
 
 	.picture-title {
+		flex: 3;
+		background-color: black;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 
-	.picture {}
+	.picture {
+		background-color: yellow;
+		width: 40vh;
+		height: 20vh;
+	}
 
 	.articles {
 		overflow-y: scroll;
+		flex: 4;
+		display: inline-flex;
+		flex-direction: column;
 	}
 
 	.article {
-		text-align: center;
-		border: 1rpx solid rgba(255, 255, 255, 1);
+		width: 100%;
+		border: 1vh solid rgba(255, 255, 255, 1);
+		display: inline-block;
+		flex-direction: row nowrap;
 	}
 
-	.article-picture {}
+	.blank {
+		flex: 1;
+		display: inline-block;
+	}
 
-	.article-time {
+	.information {
+		flex: 1;
+		display: inline-flex;
+		background-color: blue;
+		flex-flow: column nowrap;
+	}
+
+	.article-picture {
+		background-image: url(u=2792432903,20076664&fm=26&gp=0.jpg);
+		background-size: cover;
+		flex: 1;
+		width: 20vh;
+		height: 15vh;
+		display: inline-flex;
+		background-color: green;
+		justify-content: flex-start;
+		align-items: flex-end;
 		color: rgba(255, 255, 255, 1);
 		text-align: left;
 		font-family: PingFangSC-regular;
+		font-size: 0.5vh;
 	}
+
 
 	.article-title {
 		color: rgba(16, 16, 16, 1);
 		text-align: left;
 		font-family: PingFangSC-regular;
+		font-size: 1vh;
+		flex: 1;
+	}
+
+	.blank1 {
+		flex: 1;
+	}
+
+	.article-information {
+		display: inline-flex;
+		flex-flow: row nowrap;
+		justify-content: space-around;
 	}
 
 	.article-author {
 		color: rgba(190, 190, 190, 1);
 		text-align: left;
 		font-family: PingFangSC-regular;
+		font-size: 1vh;
+		flex: 3;
+	}
+
+	.blank2 {
+		flex: 10;
 	}
 
 	.article-reader {
 		color: rgba(190, 190, 190, 1);
 		text-align: right;
 		font-family: SFUIText-regular;
+		font-size: 1vh;
+		flex: 1;
 	}
 </style>
