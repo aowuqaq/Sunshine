@@ -1,10 +1,10 @@
 {
-  "description": "项目配置文件。",
+  "description": "项目配置文件",
   "packOptions": {
     "ignore": []
   },
   "setting": {
-    "urlCheck": false,
+    "urlCheck": true,
     "es6": true,
     "enhance": false,
     "postcss": true,
@@ -37,9 +37,14 @@
     "minifyWXSS": true
   },
   "compileType": "miniprogram",
-  "libVersion": "",
-  "appid": "touristappid",
+  "libVersion": "2.14.0",
+  "appid": "wx582a52df939d1ffa",
   "projectname": "PsyProgram",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "scripts": {},
+  "isGameTourist": false,
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {
@@ -52,15 +57,14 @@
     "game": {
       "list": []
     },
+    "plugin": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
     "miniprogram": {
-      "list": [
-        {
-          "name": "",
-          "path": "",
-          "query": "",
-          "id": 0
-        }
-      ]
+      "list": []
     }
   }
 }

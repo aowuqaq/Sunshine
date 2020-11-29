@@ -3,6 +3,7 @@
     "pages/login/login",
     "pages/regist/regist",
     "pages/home/home",
+    "pages/letter/letter",
     "pages/index/index",
     "pages/hole/index"
   ],
@@ -29,5 +30,6 @@
       }
     ]
   },
+  "permission": {},
   "usingComponents": {}
 }

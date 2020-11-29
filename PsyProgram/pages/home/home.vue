@@ -65,15 +65,15 @@
 				<view>
 					<button>
 						<view class="article">
-						<!--文章导航-->
-						<view>
+							<!--文章导航-->
+
 							<view class="article-picture">
 
 								<!--发布时间-->
 								<text>33分钟前</text>
 
 							</view>
-							<view class="blank"></view>
+
 							<view class="information">
 								<view class="article-title">
 									<!--标题-->
@@ -92,63 +92,79 @@
 									</view>
 								</view>
 							</view>
-						</view>
+
 						</view>
 					</button>
 				</view>
 
-				<view class="article">
-					<!--文章导航-->
-					<view class="article-picture">
-						<!--配图-->
-						<image></image>
+				<view>
+					<button>
+						<view class="article">
+							<!--文章导航-->
 
-						<view class="article-time">
-							<!--发布时间-->
-							<text></text>
+							<view class="article-picture">
+
+								<!--发布时间-->
+								<text>33分钟前</text>
+
+							</view>
+
+							<view class="information">
+								<view class="article-title">
+									<!--标题-->
+									<text>互联网时代：灵魂的归属与栖息之地在何处</text>
+								</view>
+								<view class="blank1"></view>
+								<view class="article-information">
+									<view class="article-author">
+										<!--作者-->
+										<text>吴怼怼</text>
+									</view>
+									<view class="blank2"></view>
+									<view class="article-reader">
+										<!--阅读数-->
+										<text>12K</text>
+									</view>
+								</view>
+							</view>
+
 						</view>
-					</view>
-					<view>
-						<view class="article-title">
-							<!--标题-->
-							<text></text>
-						</view>
-						<view class="article-author">
-							<!--作者-->
-							<text></text>
-						</view>
-						<view class="article-reader">
-							<!--阅读数-->
-							<text></text>
-						</view>
-					</view>
+					</button>
 				</view>
 
-				<view class="article">
-					<!--文章导航-->
-					<view class="article-picture">
-						<!--配图-->
-						<image></image>
+				<view>
+					<button>
+						<view class="article">
+							<!--文章导航-->
 
-						<view class="article-time">
-							<!--发布时间-->
-							<text></text>
+							<view class="article-picture">
+
+								<!--发布时间-->
+								<text>33分钟前</text>
+
+							</view>
+
+							<view class="information">
+								<view class="article-title">
+									<!--标题-->
+									<text>互联网时代：灵魂的归属与栖息之地在何处</text>
+								</view>
+								<view class="blank1"></view>
+								<view class="article-information">
+									<view class="article-author">
+										<!--作者-->
+										<text>吴怼怼</text>
+									</view>
+									<view class="blank2"></view>
+									<view class="article-reader">
+										<!--阅读数-->
+										<text>12K</text>
+									</view>
+								</view>
+							</view>
+
 						</view>
-					</view>
-					<view>
-						<view class="article-title">
-							<!--标题-->
-							<text></text>
-						</view>
-						<view class="article-author">
-							<!--作者-->
-							<text></text>
-						</view>
-						<view class="article-reader">
-							<!--阅读数-->
-							<text></text>
-						</view>
-					</view>
+					</button>
 				</view>
 			</view>
 		</view>
@@ -301,36 +317,34 @@
 	.article {
 		width: 100%;
 		border: 1vh solid rgba(255, 255, 255, 1);
-		display: inline-block;
+		display: inline-flex;
 		flex-direction: row nowrap;
+		align-self: flex-start;
 	}
 
-	.blank {
-		flex: 1;
-		display: inline-block;
-	}
+
 
 	.information {
-		flex: 1;
+		flex: 10;
 		display: inline-flex;
-		background-color: blue;
+		background-color: darkgreen;
 		flex-flow: column nowrap;
+		align-self: flex-start;
+		height: 15vh;
 	}
 
 	.article-picture {
 		background-image: url(u=2792432903,20076664&fm=26&gp=0.jpg);
 		background-size: cover;
-		flex: 1;
-		width: 20vh;
+		flex: 7;
 		height: 15vh;
 		display: inline-flex;
-		background-color: green;
 		justify-content: flex-start;
 		align-items: flex-end;
 		color: rgba(255, 255, 255, 1);
 		text-align: left;
 		font-family: PingFangSC-regular;
-		font-size: 0.5vh;
+		font-size: 1vh;
 	}
 
 
@@ -338,7 +352,7 @@
 		color: rgba(16, 16, 16, 1);
 		text-align: left;
 		font-family: PingFangSC-regular;
-		font-size: 1vh;
+		font-size: 2vh;
 		flex: 1;
 	}
 

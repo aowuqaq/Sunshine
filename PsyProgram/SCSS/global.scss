@@ -10,21 +10,21 @@
 .title{
 	display: inline-flex;
 	flex-flow: row nowrap;
-	flex:0.5;
+	flex:1;
 	background-color: rgba(206, 255, 206,1);
 }
 /*主题样式total*/
 .total{
 	display: inline-flex;
 	flex-flow: column nowrap;
-	flex: 9;
+	flex: 12;
 	background-color: rgba(242, 242, 242,1);
 }
 /*底部样式indo*/
 .indo{
 	display: inline-flex;
 	flex-flow: row nowrap;
-	flex: 0.5;
+	flex: 1;
 	justify-content: space-around;
 	background-color: rgba(248, 248, 248,1);
 	color: rgba(118, 115, 115,1);

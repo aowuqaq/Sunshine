@@ -18,6 +18,12 @@
 				"navigationBarTitleText": "主页"
 			}
 		},
+		{
+			"path": "pages/letter/letter",
+			"style": {
+				"navigationBarTitleText": "书信"
+			}
+		},
 		// {
 		// 	"path": "pages/login/login",
 		// 	"style": {
