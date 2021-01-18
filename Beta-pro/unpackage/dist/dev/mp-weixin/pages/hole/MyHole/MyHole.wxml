@@ -1,0 +1,1 @@
+<view><u-avatar vue-id="115ce8e6-1" src="{{fanhui}}" mode="circle" data-event-opts="{{[['^click',[['fanhui']]]]}}" bind:click="__e" bind:__l="__l"></u-avatar></view>

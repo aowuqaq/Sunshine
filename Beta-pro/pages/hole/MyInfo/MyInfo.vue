@@ -1,0 +1,22 @@
+<template>
+	<view>
+		太丑了那设计的，先不做了，肯定要大改，很不清晰
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				
+			}
+		},
+		methods: {
+			
+		}
+	}
+</script>
+
+<style>
+
+</style>

@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/my/my",
+    "pages/my/message/message/message",
+    "pages/my/message/avatarSetting/avatarSetting",
+    "pages/login/login",
+    "pages/regist/regist",
+    "pages/index/index",
+    "pages/home/home",
+    "pages/letter/letter",
+    "pages/home/article",
+    "pages/home/activity",
+    "pages/home/search",
+    "pages/home/authorpage",
+    "pages/hole/index",
+    "pages/hole/MyHole/MyHole",
+    "pages/hole/MyInfo/MyInfo"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/hole/index",
+        "text": "树洞"
+      },
+      {
+        "pagePath": "pages/hole/index",
+        "text": "发布"
+      },
+      {
+        "pagePath": "pages/letter/letter",
+        "text": "书信"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "个人"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap73.json"
+}

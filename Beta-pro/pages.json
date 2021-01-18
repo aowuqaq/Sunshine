@@ -1,0 +1,133 @@
+{
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "个人"
+			}
+		},
+		{
+			"path": "pages/my/message/message/message",
+			"style": {
+				"navigationBarTitleText": "个人资料"
+			}
+		},
+		{
+			"path": "pages/my/message/avatarSetting/avatarSetting",
+			"style": {
+				"navigationBarTitleText": "头像设置"
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登陆"
+			}
+		},
+		{
+			"path": "pages/regist/regist",
+			"style": {
+				"navigationBarTitleText": "注册"
+			}
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		},
+		{
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "主页"
+			}
+		},
+		{
+			"path": "pages/letter/letter",
+			"style": {
+				"navigationBarTitleText": "书信"
+			}
+		},
+		{
+			"path": "pages/home/article",
+			"style": {
+				"navigationBarTitleText": "文章"
+			}
+		},
+		{
+			"path": "pages/home/activity",
+			"style": {
+				"navigationBarTitleText": "活动"
+			}
+		},
+		{
+			"path": "pages/home/search",
+			"style": {
+				"navigationBarTitleText": "搜索"
+			}
+		},
+		{
+			"path": "pages/home/authorpage",
+			"style": {
+				"navigationBarTitleText": "作者页"
+			}
+		},
+		{
+			"path": "pages/hole/index",
+			"style": {
+				"navigationBarTitleText": "树洞"
+			}
+		},
+		{
+			"path": "pages/hole/MyHole/MyHole",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/hole/MyInfo/MyInfo",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}
+	],
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#3cc51f",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/home/home",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/hole/index",
+				"text": "树洞"
+			},
+			{
+				"pagePath": "pages/hole/index",
+				"text": "发布"
+			},
+			{
+				"pagePath": "pages/letter/letter",
+				"text": "书信"
+			},
+			{
+				"pagePath": "pages/my/my",
+				"text": "个人"
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	}
+}

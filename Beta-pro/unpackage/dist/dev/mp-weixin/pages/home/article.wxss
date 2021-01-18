@@ -1,0 +1,60 @@
+
+.all{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-flow: column nowrap;
+	        flex-flow: column nowrap;
+}
+.back{
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: inline-flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-flow: row nowrap;
+	        flex-flow: row nowrap;
+	-webkit-align-content: space-around;
+	        align-content: space-around;
+}
+.backhome{
+	text-align: start;
+}
+.backmine{
+	text-align: end;
+}
+.title{
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: inline-flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-flow: column nowrap;
+	        flex-flow: column nowrap;
+}
+.article-title{
+	text-align: start;
+}
+.author{
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: inline-flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-flow: row nowrap;
+	        flex-flow: row nowrap;
+	-webkit-align-content: space-around;
+	        align-content: space-around;
+}
+.photo{
+	background-image: ;
+}
+.name{
+	background-color: #007AFF;
+}
+.time{
+	background-color: grey;
+}
+
