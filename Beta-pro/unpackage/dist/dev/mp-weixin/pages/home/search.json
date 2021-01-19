@@ -1,4 +1,7 @@
 {
   "navigationBarTitleText": "搜索",
-  "usingComponents": {}
+  "usingComponents": {
+    "u-toast": "/node-modules/uview-ui/components/u-toast/u-toast",
+    "u-search": "/node-modules/uview-ui/components/u-search/u-search"
+  }
 }

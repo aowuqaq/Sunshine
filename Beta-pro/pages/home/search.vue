@@ -1,74 +1,55 @@
 <template>
+	<view class="u-demo">
+		<view class="u-demo-wrap">
+			<view class="u-demo-area">
+				<u-toast ref="uToast"></u-toast>
+				<u-search v-model="value" @change="change" @custom="custom" @search="search" :shape="shape" :clearabled="clearabled" 
+				:show-action="showAction" :input-align="inputAlign" @clear="clear"></u-search>
+			</view>
+		</view>
+	</view>
 </template>
 
 <script>
+	export default {
+		data() {
+			return {
+				value: '',
+				shape: 'round',
+				clearabled: true,
+				showAction: true,
+				inputAlign: 'left'
+			}
+		},
+		watch: {
+			// 这里的演示为证明通过v-model绑定值，它是双向绑定的，意味着您无需监听change事件
+			// 也能知道value值当前的内容
+			value(val) {
+				// console.log(val);
+			}
+		},
+		methods: {
+			change(value) {
+				// 搜索框内容变化时，会触发此事件，value值为输入框的内容
+				//console.log(value);
+			},
+			custom(value) {
+				//console.log(value);
+				this.$u.toast('输入值为：' + value)
+			},
+			search(value) {
+				this.$refs.uToast.show({
+					title: '搜索内容为：' + value,
+					type: 'success'
+				})
+			},
+			clear() {
+				// console.log(this.value);
+			}
+		}
+	}
 </script>
 
-<style>
+<style lang="scss" scoped>
+	.u-demo {}
 </style>
-
-		<view class="indo">
-			<!--底部小视窗-->
-			<!--首页界面-->
-			<view class="home">
-				<button>
-					<view class="homebutton">
-						<image></image>
-					</view>
-					<view class="hometext">
-						<text>首页</text>
-
-					</view>
-				</button>
-			</view>
-			<!--跳转至树洞界面-->
-			<view class="tree">
-				<button>
-					<view class="treebutton">
-						<image></image>
-					</view>
-					<view class="treetext">
-
-						<text>树洞</text>
-					</view>
-				</button>
-			</view>
-			<!--跳转至发布界面-->
-			<view class="publish">
-				<button>
-					<view class="publishbutton">
-						<image></image>
-					</view>
-					<view class="publishtext">
-
-						<text>发布</text>
-					</view>
-				</button>
-			</view>
-
-			<!--跳转至书信界面-->
-			<view class="letter" @click="goLetter()">
-				<button>
-					<view class="letterbutton">
-						<image></image>
-					</view>
-					<view class="lettertext">
-
-						<text>书信</text>
-					</view>
-				</button>
-			</view>
-
-			<!--跳转至我的界面-->
-			<view class="mine">
-				<button>
-					<view class="minebutton">
-						<image></image>
-					</view>
-					<view class="minetext">
-
-						<text>我的</text>
-					</view>
-				</button>
-			</view>
-		</view>

@@ -10,6 +10,12 @@
 			}
 		},
 		{
+			"path": "pages/hole/MyHole/MyHole",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		},
+		{
 			"path": "pages/my/message/message/message",
 			"style": {
 				"navigationBarTitleText": "个人资料"
@@ -81,13 +87,7 @@
 				"navigationBarTitleText": "树洞"
 			}
 		},
-		{
-			"path": "pages/hole/MyHole/MyHole",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-		},
+
 		{
 			"path": "pages/hole/MyInfo/MyInfo",
 			"style": {
@@ -95,6 +95,61 @@
 				"enablePullDownRefresh": false
 			}
 
+		}, {
+			"path": "pages/issue/issue",
+			"style": {
+				"navigationBarTitleText": "我有一壶酒，你有你的故事吗"
+			}
+		},
+		{
+			"path": "pages/my/collect/collect",
+			"style": {
+				"navigationBarTitleText": "收藏"
+
+			}
+		},
+		{
+			"path": "pages/my/info/info",
+			"style": {
+				"navigationBarTitleText": "文章"
+
+			}
+		},
+		{
+			"path": "pages/my/enjoy/enjoy",
+			"style": {
+				"navigationBarTitleText": "喜欢"
+
+			}
+		},
+		{
+			"path": "pages/my/history/history",
+			"style": {
+				"navigationBarTitleText": "历史记录"
+
+			}
+		},
+		{
+			"path": "pages/my/subscribe/subscribe",
+			"style": {
+				"navigationBarTitleText": "订阅"
+
+			}
+		},
+		{
+			"path": "pages/my/heartcondition/heartcondition",
+			"style": {
+				"navigationBarTitleText": "健康状况"
+			}
+		}, {
+			"path": "pages/hole/ariticle/article",
+			"style": {}
+		}, {
+			"path": "pages/hole/ariticle/activity",
+			"style": {}
+		},{
+			"path": "pages/hole/ariticle/notice",
+			"style": {}
 		}
 	],
 	"tabBar": {
@@ -104,23 +159,33 @@
 		"backgroundColor": "#ffffff",
 		"list": [{
 				"pagePath": "pages/home/home",
-				"text": "首页"
+				"text": "首页",
+				"iconPath": "static/tabbarLogo/shuben.png",
+				"selectedIconPath": "static/tabbarLogo/shuben.png"
 			},
 			{
 				"pagePath": "pages/hole/index",
-				"text": "树洞"
+				"text": "树洞",
+				"iconPath": "static/tabbarLogo/soul.png",
+				"selectedIconPath": "static/tabbarLogo/soul.png"
 			},
 			{
-				"pagePath": "pages/hole/index",
-				"text": "发布"
+				"pagePath": "pages/issue/issue",
+				"text": "发布",
+				"iconPath": "static/tabbarLogo/jiahao.png",
+				"selectedIconPath": "static/tabbarLogo/jiahao.png"
 			},
 			{
 				"pagePath": "pages/letter/letter",
-				"text": "书信"
+				"text": "书信",
+				"iconPath": "static/tabbarLogo/xin.png",
+				"selectedIconPath": "static/tabbarLogo/xin.png"
 			},
 			{
 				"pagePath": "pages/my/my",
-				"text": "个人"
+				"text": "个人",
+				"iconPath": "static/tabbarLogo/my.png",
+				"selectedIconPath": "static/tabbarLogo/my.png"
 			}
 		]
 	},

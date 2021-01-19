@@ -28,7 +28,7 @@
 			<u-button @click="clear">清空帖子</u-button>
 			<u-waterfall v-model="flowList" ref="uWaterfall">
 				<template v-slot:left="{leftList}">
-					<view class="demo-warter" v-for="(item, index) in leftList" :key="index">
+					<view class="demo-warter" v-for="(item, index) in leftList" :key="index" @tap="">
 						<!-- 警告：微信小程序中需要hx2.8.11版本才支持在template中结合其他组件，比如下方的lazy-load组件 -->
 						<u-lazy-load threshold="-450" border-radius="10" :image="item.image" :index="index"></u-lazy-load>
 						<view class="demo-title">
@@ -52,7 +52,7 @@
 					</view>
 				</template>
 				<template v-slot:right="{rightList}">
-					<view class="demo-warter" v-for="(item, index) in rightList" :key="index">
+					<view class="demo-warter" v-for="(item, index) in rightList" :key="index" @tap="">
 						<u-lazy-load threshold="-450" border-radius="10" :image="item.image" :index="index"></u-lazy-load>
 						<view class="demo-title">
 							{{item.title}}
@@ -171,12 +171,12 @@
 		// onLoad() {
 		// 	this.addRandomData();
 		// },
-		onReady() {
-			this.addRandomData();
-		},
-		// onShow() {
+		// onReady() {
 		// 	this.addRandomData();
 		// },
+		onShow() {
+			this.addRandomData();
+		},
 		onReachBottom() {
 			this.loadStatus = 'loading';
 			// 模拟数据加载
@@ -186,6 +186,16 @@
 			}, 1000)
 		},
 		methods: {
+			gotoMyHole() {
+				uni.navigateTo({
+					url: 'MyHole/MyHole'
+				});
+			},
+			gotoMyInfo() {
+				uni.navigateTo({
+					url: 'MyInfo/MyInfo'
+				});
+			},
 			addRandomData() {
 				for (let i = 0; i < 10; i++) {
 					let index = this.$u.random(0, this.list.length - 1);
@@ -200,7 +210,14 @@
 			},
 			clear() {
 				this.$refs.uWaterfall.clear();
-			}
+			},
+			// 暂时没有URL先这样
+			// openinfo(e) {
+			// 	var newsid = e.currentTarget.dataset.newsid;
+			// 	uni.navigateTo({
+			// 		url: './ariticle/article?newsid='+newsid
+			// 	});
+			// }
 		}
 	}
 </script>

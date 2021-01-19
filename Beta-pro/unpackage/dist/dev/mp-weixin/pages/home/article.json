@@ -1,4 +1,12 @@
 {
   "navigationBarTitleText": "文章",
-  "usingComponents": {}
+  "usingComponents": {
+    "u-image": "/node-modules/uview-ui/components/u-image/u-image",
+    "u-loading": "/node-modules/uview-ui/components/u-loading/u-loading",
+    "u-parse": "/node-modules/uview-ui/components/u-parse/u-parse",
+    "u-line": "/node-modules/uview-ui/components/u-line/u-line",
+    "u-toast": "/node-modules/uview-ui/components/u-toast/u-toast",
+    "u-skeleton": "/node-modules/uview-ui/components/u-skeleton/u-skeleton",
+    "u-swipe-action": "/node-modules/uview-ui/components/u-swipe-action/u-swipe-action"
+  }
 }

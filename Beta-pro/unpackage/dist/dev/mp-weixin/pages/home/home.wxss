@@ -185,7 +185,6 @@
   -webkit-box-flex: 3;
   -webkit-flex: 3;
           flex: 3;
-  background-color: black;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: inline-flex;
@@ -197,7 +196,6 @@
           align-items: center;
 }
 .picture.data-v-92bb8f34 {
-  background-color: yellow;
   width: 40vh;
   height: 20vh;
 }
