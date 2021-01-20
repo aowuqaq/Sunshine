@@ -47,7 +47,7 @@
 		</view>
 		<view class="u-m-t-21">
 			<u-cell-group>
-				<u-cell-item icon="heart-fill" title="我的好友"></u-cell-item>
+				<u-cell-item icon="heart-fill" title="我的好友" @tap="openMyFriend"></u-cell-item>
 				<u-cell-item icon="account" title="我的粉丝"></u-cell-item>
 			</u-cell-group>
 		</view>
@@ -57,7 +57,7 @@
 		<view class="u-m-t-22">
 			<u-cell-group>
 				<u-cell-item icon="heart" title="反馈与帮助"></u-cell-item>
-				<u-cell-item icon="setting-fill" title="系统设置"></u-cell-item>
+				<u-cell-item icon="setting-fill" title="系统设置" @tap="openSysSetting"></u-cell-item>
 			</u-cell-group>
 		</view>
 	</view>
@@ -79,6 +79,16 @@
 			openMessage(){
 				uni.navigateTo({
 					url: './message/message/message'
+				});
+			},
+			openMyFriend(){
+				uni.navigateTo({
+					url: './friend/friend'
+				});
+			},
+			openSysSetting(){
+				uni.navigateTo({
+					url: './set/set'
 				});
 			},
 			openinfo(e) {

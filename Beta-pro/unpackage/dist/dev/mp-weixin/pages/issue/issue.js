@@ -130,20 +130,17 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var jinEdit = function jinEdit() {Promise.all(/*! require.ensure | components/jin-edit/jin-edit */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/jin-edit/jin-edit")]).then((function () {return resolve(__webpack_require__(/*! ../../components/jin-edit/jin-edit.vue */ 391));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var jxImgTextEdit = function jxImgTextEdit() {__webpack_require__.e(/*! require.ensure | components/jx-imgText-edit/jx-imgText-edit */ "components/jx-imgText-edit/jx-imgText-edit").then((function () {return resolve(__webpack_require__(/*! @/components/jx-imgText-edit/jx-imgText-edit.vue */ 470));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+
+
+
+
+
+
+
+
+
 {
   data: function data() {
     return {
@@ -152,22 +149,14 @@ var _default =
       placeholder: "标题......" };
 
   },
+  components: {
+    jinEdit: jinEdit,
+    jxImgTextEdit: jxImgTextEdit },
+
   methods: {
-    onEditorReady: function onEditorReady() {var _this = this;
-
-
-
-
-
-      uni.createSelectorQuery().select('#editor').context(function (res) {
-        _this.editorCtx = res.context;
-      }).exec();
-
-    },
-    undo: function undo() {
-      this.editorCtx.undo();
+    editOk: function editOk(res) {
+      console.log(res);
     } } };exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 

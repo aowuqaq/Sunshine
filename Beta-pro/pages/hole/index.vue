@@ -8,16 +8,26 @@
 
 		<view>
 			<!-- 分段器 -->
-			<u-subsection :list="list0" :current="1"></u-subsection>
+			<u-subsection :list="list0" :current="1" @change="sectionChange"></u-subsection>
 		</view>
 
-		<view class="huodong">
+		<view v-show="curNow === 0" class="huodong">
 			<!-- 字体大小不一尚未进行设置 -->
 			<u-cell-group>
 				<u-cell-item icon="setting-fill" title="[公告] 社区发帖守则"></u-cell-item>
 				<u-cell-item icon="setting-fill" title="[招募]  社区警察 I WANT YOU"></u-cell-item>
 				<u-cell-item icon="setting-fill" title="[活动]  书写心情 分享故事"></u-cell-item>
 				<u-cell-item icon="setting-fill" title="[话题]  你最想出续作的作品"></u-cell-item>
+				<u-cell-item icon="setting-fill" title="[热门]  我的一个抑郁症朋友"></u-cell-item>
+				<u-cell-item icon="setting-fill" title="[反馈]  为了更好的体验,我们需要您的反馈"></u-cell-item>
+			</u-cell-group>
+		</view>
+		
+		<view v-show="curNow === 1" class="huodong">
+			<!-- 字体大小不一尚未进行设置 -->
+			<u-cell-group>
+				<u-cell-item icon="setting-fill" title="[公告] 社区发帖守则"></u-cell-item>
+				<u-cell-item icon="setting-fill" title="[招募]  社区警察 I WANT YOU"></u-cell-item>
 				<u-cell-item icon="setting-fill" title="[热门]  我的一个抑郁症朋友"></u-cell-item>
 				<u-cell-item icon="setting-fill" title="[反馈]  为了更好的体验,我们需要您的反馈"></u-cell-item>
 			</u-cell-group>
@@ -92,7 +102,7 @@
 						name: '最新活动'
 					}
 				],
-				current: 1,
+				curNow :0,
 				// 头像
 				src_tx: 'http://pic2.sc.chinaz.com/Files/pic/pic9/202002/hpic2119_s.jpg',
 				src_xx: 'https://i.loli.net/2021/01/18/sTMqxPSv78FZrE2.png',
@@ -195,6 +205,9 @@
 				uni.navigateTo({
 					url: 'MyInfo/MyInfo'
 				});
+			},
+			sectionChange(index) {
+				this.curNow = index;
 			},
 			addRandomData() {
 				for (let i = 0; i < 10; i++) {

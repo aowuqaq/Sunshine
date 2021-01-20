@@ -240,6 +240,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
@@ -252,7 +262,7 @@ var _default =
         name: '最新活动' }],
 
 
-      current: 1,
+      curNow: 0,
       // 头像
       src_tx: 'http://pic2.sc.chinaz.com/Files/pic/pic9/202002/hpic2119_s.jpg',
       src_xx: 'https://i.loli.net/2021/01/18/sTMqxPSv78FZrE2.png',
@@ -355,6 +365,9 @@ var _default =
       uni.navigateTo({
         url: 'MyInfo/MyInfo' });
 
+    },
+    sectionChange: function sectionChange(index) {
+      this.curNow = index;
     },
     addRandomData: function addRandomData() {
       for (var i = 0; i < 10; i++) {

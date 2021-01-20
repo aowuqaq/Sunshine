@@ -1,0 +1,41 @@
+page.data-v-449ea392 {
+  background: #fff;
+}
+.jx-imgText-edit.data-v-449ea392 {
+  width: 100%;
+  padding: 0 30rpx 0rpx 30rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 10rpx;
+  background: #fff;
+}
+.jx-imgText-edit .content .textarea_com.data-v-449ea392 {
+  padding: 20rpx 0;
+  width: 100%;
+  font-size: 32rpx;
+  background: #fff;
+  line-height: 1.5;
+}
+.jx-imgText-edit .content .view_com.data-v-449ea392 {
+  width: 100%;
+  position: relative;
+}
+.jx-imgText-edit .content .view_com .img_com.data-v-449ea392 {
+  width: 100%;
+}
+.jx-imgText-edit .content .view_com .mask.data-v-449ea392 {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.jx-imgText-edit .content .view_com .del.data-v-449ea392 {
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  bottom: 30rpx;
+  right: 20rpx;
+}
+

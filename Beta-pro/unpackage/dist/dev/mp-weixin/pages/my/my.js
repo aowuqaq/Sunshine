@@ -232,6 +232,16 @@ var _default =
         url: './message/message/message' });
 
     },
+    openMyFriend: function openMyFriend() {
+      uni.navigateTo({
+        url: './friend/friend' });
+
+    },
+    openSysSetting: function openSysSetting() {
+      uni.navigateTo({
+        url: './set/set' });
+
+    },
     openinfo: function openinfo(e) {
       uni.navigateTo({
         url: '../my/collect/collect' });

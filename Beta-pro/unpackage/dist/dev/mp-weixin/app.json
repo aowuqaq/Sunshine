@@ -24,7 +24,9 @@
     "pages/my/heartcondition/heartcondition",
     "pages/hole/ariticle/article",
     "pages/hole/ariticle/activity",
-    "pages/hole/ariticle/notice"
+    "pages/hole/ariticle/notice",
+    "pages/my/friend/friend",
+    "pages/my/set/set"
   ],
   "subPackages": [],
   "window": {
@@ -71,6 +73,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap46.json"
+  "usingComponents": {}
 }

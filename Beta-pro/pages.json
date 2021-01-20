@@ -150,6 +150,12 @@
 		},{
 			"path": "pages/hole/ariticle/notice",
 			"style": {}
+		},{
+			"path": "pages/my/friend/friend",
+			"style": {}
+		},{
+			"path": "pages/my/set/set",
+			"style": {}
 		}
 	],
 	"tabBar": {
