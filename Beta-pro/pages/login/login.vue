@@ -35,7 +35,12 @@
 		</view>
 	</view>
 </template>
+
 <script>
+	//导入base64解码文件
+	import {
+		decodeToken
+	} from '@/utils/jsrsasign.js'
 	export default {
 		data() {
 			return {
@@ -50,25 +55,58 @@
 			};
 		},
 		onLoad() {
-			uni.request({
-				url: this.$webUrl + '/getverified?width=100&height=50&length=5',
-				method: 'GET',
-				header: {
-					'Token': uni.getStorageSync('token')
-				},
-				responseType: 'ArrayBuffer',
-				success: (res) => {
-					console.log(res);
-					this.verifyCodeImageSrc = "data:image/png;base64," + uni.arrayBufferToBase64(res.data);
-					uni.setStorage({
-						key: 'token',
-						data: res.cookies[0],
-						success: function() {
-							console.log('setStorageSuccess!');
-						}
+			//判断是否有token
+			const token = uni.getStorageSync('token');
+			if ((token === undefined) || (token === '')) {
+				uni.request({
+					url: this.$webUrl + '/getverified?width=100&height=50&length=5',
+					method: 'GET',
+					header: {},
+					responseType: 'ArrayBuffer',
+					success: (res) => {
+						console.log(res);
+						console.log(res.cookies[0]);
+						this.verifyCodeImageSrc = "data:image/png;base64," + uni.arrayBufferToBase64(res.data);
+						uni.setStorage({
+							key: 'token',
+							data: res.cookies[0].substring(6),
+							success: function() {
+								console.log('setStorageSuccess!');
+							}
+						});
+					}
+				})
+			} else {
+				const decodeTokenDataExp = decodeToken(token)["exp"];
+				const currentTimeStamp = Math.round(new Date() / 1000);
+				// 判断token是否过期
+				if (Number(currentTimeStamp) <= decodeTokenDataExp) {
+					uni.switchTab({
+						url: '/pages/home/home',
+						animationType: 'pop-in',
+						animationDuration: 200
 					});
+				} else {
+					uni.request({
+						url: this.$webUrl + '/getverified?width=100&height=50&length=5',
+						method: 'GET',
+						header: {},
+						responseType: 'ArrayBuffer',
+						success: (res) => {
+							console.log(res);
+							console.log(res.cookies[0]);
+							this.verifyCodeImageSrc = "data:image/png;base64," + uni.arrayBufferToBase64(res.data);
+							uni.setStorage({
+								key: 'token',
+								data: res.cookies[0].substring(6),
+								success: function() {
+									console.log('setStorageSuccess!');
+								}
+							});
+						}
+					})
 				}
-			})
+			}
 		},
 		methods: {
 			goToRegist: function() {
@@ -79,9 +117,7 @@
 				});
 			},
 			bindLogin: function() {
-				const token = uni.getStorageSync('token');
-				console.log(this)
-				console.log(token)
+				const tokent = uni.getStorageSync('token');
 				uni.request({
 					url: this.$webUrl + '/user/login',
 					method: 'POST',
@@ -92,16 +128,14 @@
 						verifycode: this.verifyCode
 					},
 					header: {
-						'Token': this.token,
-						'content-type': 'application/json',
+						'Token': tokent,
+						'content-type': 'application/json;charset=utf-8',
 					},
 					dataType: 'json',
 					success: (res) => {
 						console.log('ajax success!');
-						console.log(res);
 						if (res.data.status === "fail") {
 							console.log('登录失败');
-
 							uni.showToast({
 								icon: 'none',
 								title: '用户名或密码或验证码错误！',
@@ -118,21 +152,10 @@
 								animationDuration: 200
 							});
 						}
-						uni.request({
-							url: 'http://www.sunshine2020cc.cn:80/test',
-							method: 'POST',
-							header: {
-								'content-type': 'application/json;charset=utf-8'
-							},
-							success: (res) => {
-								console.log(res);
-							}
-						})
-						return;
 					},
 					//展示错误原因以及信息
 					fail: () => {
-						console.log('request fail');
+						console.log('ajax false');
 						uni.showModal({
 							content: 'login false',
 							showCancel: false
@@ -145,8 +168,23 @@
 				});
 			},
 			changeCodeImg: function() {
-				var num = Math.floor(Math.random() * (6 - 4 + 1) + 4); //生成一个随机数（防止缓存）
-				this.verifyCodeImageSrc = 'http://www.sunshine2020cc.cn:80/getverified?width=100&height=50&length=' + num;
+				uni.request({
+					url: this.$webUrl + '/getverified?width=100&height=50&length=5',
+					method: 'GET',
+					header: {},
+					responseType: 'ArrayBuffer',
+					success: (res) => {
+						console.log(res);
+						this.verifyCodeImageSrc = "data:image/png;base64," + uni.arrayBufferToBase64(res.data);
+						uni.setStorage({
+							key: 'token',
+							data: res.cookies[0].substring(6),
+							success: function() {
+								console.log('setStorageSuccess!');
+							}
+						});
+					}
+				})
 			}
 		}
 	}
@@ -204,7 +242,6 @@
 		font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 		font-size: large;
 		align-self: flex-start;
-		// color: #AA9FBB;
 		color: #51629E;
 	}
 
