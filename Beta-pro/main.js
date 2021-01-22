@@ -4,7 +4,7 @@ import uView from "uview-ui";
 
 Vue.use(uView);
 
-Vue.config.productionTip = false
+Vue.prototype.$webUrl = 'http://www.sunshine2020cc.cn:80'
 
 App.mpType = 'app'
 
@@ -14,7 +14,7 @@ const app = new Vue({
 // Vue.prototype添加全局变量
 // Vue.component注册全局组件
 // 配置全局URL
-Vue.prototype.apiServier = ''
+
 
 //挂载Vue实例
 app.$mount()

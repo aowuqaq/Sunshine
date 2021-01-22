@@ -42,7 +42,7 @@
 				userName: '',
 				userPassword: '',
 				verifyCode: '',
-				verifyCodeImageSrc: 'http://www.sunshine2020cc.cn:8080/getverified?width=100&height=50&length=5',
+				verifyCodeImageSrc: '',
 				imageURL: '/static/back3.jpg',
 				res: {
 					statecode: ''
@@ -50,7 +50,25 @@
 			};
 		},
 		onLoad() {
-
+			uni.request({
+				url: this.$webUrl + '/getverified?width=100&height=50&length=5',
+				method: 'GET',
+				header: {
+					'Token': uni.getStorageSync('token')
+				},
+				responseType: 'ArrayBuffer',
+				success: (res) => {
+					console.log(res);
+					this.verifyCodeImageSrc = "data:image/png;base64," + uni.arrayBufferToBase64(res.data);
+					uni.setStorage({
+						key: 'token',
+						data: res.cookies[0],
+						success: function() {
+							console.log('setStorageSuccess!');
+						}
+					});
+				}
+			})
 		},
 		methods: {
 			goToRegist: function() {
@@ -61,46 +79,33 @@
 				});
 			},
 			bindLogin: function() {
-				const data = {
-					account: this.userName,
-					password: this.userPassword,
-					verifycode: this.verifyCode
-				};
-
-				console.log(data);
+				const token = uni.getStorageSync('token');
+				console.log(this)
+				console.log(token)
 				uni.request({
-					// 服务器的URL(暂时使用全局URL)
-					url: 'http://www.sunshine2020cc.cn:8080/user/login',
-					// url:'http://49.235.25.29:8080/user/login',
+					url: this.$webUrl + '/user/login',
 					method: 'POST',
+					dataType: "application/json",
 					data: {
-						account: data.account,
-						password: data.password,
-						verifycode: data.verifycode
+						account: this.userName,
+						password: this.userPassword,
+						verifycode: this.verifyCode
 					},
 					header: {
-						//Uuiapp对于POST方法而且header[content-type]为Application/Json的数据进行序列化
-						//前后端分离交互使用JSON数据格式
-						'content-type': 'application/json;charset=utf-8',
-						// 'cookie': uni.getStorageSync('sessionid')
+						'Token': this.token,
+						'content-type': 'application/json',
 					},
 					dataType: 'json',
-					// datatype默认为json，会对返回的数据进行一次parse
-					// 默认为method为GET，此处由于安全性和稳定性，故使用POST方法
 					success: (res) => {
-						console.log(uni.getStorageSync('sessionid'))
 						console.log('ajax success!');
 						console.log(res);
 						if (res.data.status === "fail") {
 							console.log('登录失败');
+
 							uni.showToast({
 								icon: 'none',
 								title: '用户名或密码或验证码错误！',
 							});
-							if (res.header["Set-Cookie"] != null) {
-								uni.setStorageSync('sessionid', res.header["Set-Cookie"]);
-							}
-							//code状态为0
 						} else if (res.data.status === 'success') {
 							uni.showToast({
 								title: '登陆成功',
@@ -114,12 +119,12 @@
 							});
 						}
 						uni.request({
-							url:'http://www.sunshine2020cc.cn:8080/test',
-							method:'POST',
-							header:{
+							url: 'http://www.sunshine2020cc.cn:80/test',
+							method: 'POST',
+							header: {
 								'content-type': 'application/json;charset=utf-8'
 							},
-							success:(res)=>{
+							success: (res) => {
 								console.log(res);
 							}
 						})
@@ -141,7 +146,7 @@
 			},
 			changeCodeImg: function() {
 				var num = Math.floor(Math.random() * (6 - 4 + 1) + 4); //生成一个随机数（防止缓存）
-				this.verifyCodeImageSrc = 'http://www.sunshine2020cc.cn:8080/getverified?width=100&height=50&length=' + num;
+				this.verifyCodeImageSrc = 'http://www.sunshine2020cc.cn:80/getverified?width=100&height=50&length=' + num;
 			}
 		}
 	}

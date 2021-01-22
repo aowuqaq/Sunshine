@@ -1,7 +1,6 @@
 {
   "navigationBarTitleText": "搜索",
   "usingComponents": {
-    "u-toast": "/node-modules/uview-ui/components/u-toast/u-toast",
-    "u-search": "/node-modules/uview-ui/components/u-search/u-search"
+    "m-search": "/components/mehaotian-search-revision/mehaotian-search-revision"
   }
 }

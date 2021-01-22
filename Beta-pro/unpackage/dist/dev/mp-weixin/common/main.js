@@ -13,7 +13,7 @@ var _uviewUi = _interopRequireDefault(__webpack_require__(/*! uview-ui */ 11));f
 
 _vue.default.use(_uviewUi.default);
 
-_vue.default.config.productionTip = false;
+_vue.default.prototype.$webUrl = 'http://www.sunshine2020cc.cn:80';
 
 _App.default.mpType = 'app';
 
@@ -23,7 +23,7 @@ _App.default));
 // Vue.prototype添加全局变量
 // Vue.component注册全局组件
 // 配置全局URL
-_vue.default.prototype.apiServier = '';
+
 
 //挂载Vue实例
 createApp(app).$mount();

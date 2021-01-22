@@ -1,14 +1,12 @@
 <template>
 	<view class="container">
-		<input placeholder="标题" class="title-input" @editOk="editOk"></input>
-		<!-- <jin-edit placeholder="请输入内容"></jin-edit> -->
-		<jxImgTextEdit ref="jxImgTextEdit" :editData="edits" @delImg="delImg"></jxImgTextEdit>
+		<input placeholder="标题" class="title-input" ></input>
+		<jin-edit placeholder="请输入内容" @editOk="editOk" uploadFileUrl="/#"></jin-edit>
 	</view>
 </template>
 
 <script>
 	import jinEdit from '../../components/jin-edit/jin-edit.vue';
-	import jxImgTextEdit from '@/components/jx-imgText-edit/jx-imgText-edit.vue';
 	export default {
 		data() {
 			return {
@@ -18,8 +16,7 @@
 			};
 		},
 		components: {
-			jinEdit,
-			jxImgTextEdit
+			jinEdit
 		},
 		methods: {
 			editOk(res) {

@@ -4,10 +4,21 @@
 	},
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登陆"
+			}
+		},{
 			"path": "pages/my/my",
 			"style": {
 				"navigationBarTitleText": "个人"
 			}
+		},{
+		    "path" : "pages/letter/docMessage/docMessage",
+		    "style" : {}
+		},{
+		    "path" : "pages/letter/makeAppoint/makeAppoint",
+		    "style" : {}
 		},
 		{
 			"path": "pages/hole/MyHole/MyHole",
@@ -25,12 +36,6 @@
 			"path": "pages/my/message/avatarSetting/avatarSetting",
 			"style": {
 				"navigationBarTitleText": "头像设置"
-			}
-		},
-		{
-			"path": "pages/login/login",
-			"style": {
-				"navigationBarTitleText": "登陆"
 			}
 		},
 		{
@@ -156,8 +161,12 @@
 		},{
 			"path": "pages/my/set/set",
 			"style": {}
+		},{
+			"path": "pages/my/fans/fans",
+			"style": {}
 		}
-	],
+        
+    ],
 	"tabBar": {
 		"color": "#7A7E83",
 		"selectedColor": "#3cc51f",

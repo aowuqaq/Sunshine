@@ -22,7 +22,7 @@
 			<view class="function">
 					<view class="letterwriting">
 						<!--写信-->
-						<text>写信</text>
+						<text class="letter-text">写信</text>
 					</view>
 					<view class="booking">
 						<!--预约-->
@@ -183,5 +183,11 @@
 	.totalblank {
 		flex: 6;
 		background-color: #999999;
+	}
+	
+	.letter-text{
+		width: 80%;
+		height: 80%;
+		border: 2rpx solid #808080;
 	}
 </style>

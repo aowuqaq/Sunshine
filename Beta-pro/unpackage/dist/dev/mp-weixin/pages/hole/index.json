@@ -1,8 +1,6 @@
 {
   "navigationBarTitleText": "树洞",
   "usingComponents": {
-    "index-u-waterfall-left": "/pages/hole/index-u-waterfall-left",
-    "index-u-waterfall-right": "/pages/hole/index-u-waterfall-right",
     "u-avatar": "/node-modules/uview-ui/components/u-avatar/u-avatar",
     "u-subsection": "/node-modules/uview-ui/components/u-subsection/u-subsection",
     "u-cell-group": "/node-modules/uview-ui/components/u-cell-group/u-cell-group",

@@ -256,4 +256,9 @@
 	        flex: 6;
 	background-color: #999999;
 }
+.letter-text{
+	width: 80%;
+	height: 80%;
+	border: 2rpx solid #808080;
+}
 

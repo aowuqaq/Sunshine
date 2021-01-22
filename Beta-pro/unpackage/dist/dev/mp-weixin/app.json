@@ -1,10 +1,12 @@
 {
   "pages": [
+    "pages/login/login",
     "pages/my/my",
+    "pages/letter/docMessage/docMessage",
+    "pages/letter/makeAppoint/makeAppoint",
     "pages/hole/MyHole/MyHole",
     "pages/my/message/message/message",
     "pages/my/message/avatarSetting/avatarSetting",
-    "pages/login/login",
     "pages/regist/regist",
     "pages/index/index",
     "pages/home/home",
@@ -26,7 +28,8 @@
     "pages/hole/ariticle/activity",
     "pages/hole/ariticle/notice",
     "pages/my/friend/friend",
-    "pages/my/set/set"
+    "pages/my/set/set",
+    "pages/my/fans/fans"
   ],
   "subPackages": [],
   "window": {

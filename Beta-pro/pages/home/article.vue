@@ -1,5 +1,11 @@
 <template>
 	<view class="all">
+		<!--返回顶部-->
+		<u-back-top :scrollTop="scrollTop" :mode="mode"
+		:bottom="bottom" :right="right" :top="top" :icon="icon" :custom-style="customStyle"
+		:icon-style="iconStyle" :tips="tips"
+		>
+		</u-back-top>
 		<!--功能界面-->
 		<view class="back">
 			<view class="backhome" @click="goHome()"><text>返回</text></view>
@@ -88,6 +94,19 @@
 	export default {
 		data() {
 			return {
+				//
+				scrollTop: 0,
+				mode: 'circle',
+				bottom: 200,
+				right: 40,
+				top: 400,
+				icon: 'arrow-upward',
+				iconStyle: {
+					color: '#909399',
+					fontSize: '38rpx'
+				},
+				customStyle: {},
+				tips: '',
 				/*标题*/
 				title: "少有人走过的路",
 				/*头像*/
@@ -206,6 +225,9 @@
 					}
 				]
 			}
+		},
+		onPageScroll(e) {
+			this.scrollTop = e.scrollTop;
 		},
 
 		onShow() {
