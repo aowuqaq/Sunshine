@@ -94,10 +94,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
   uCellGroup: function() {
-    return __webpack_require__.e(/*! import() | node-modules/uview-ui/components/u-cell-group/u-cell-group */ "node-modules/uview-ui/components/u-cell-group/u-cell-group").then(__webpack_require__.bind(null, /*! uview-ui/components/u-cell-group/u-cell-group.vue */ 320))
+    return __webpack_require__.e(/*! import() | node-modules/uview-ui/components/u-cell-group/u-cell-group */ "node-modules/uview-ui/components/u-cell-group/u-cell-group").then(__webpack_require__.bind(null, /*! uview-ui/components/u-cell-group/u-cell-group.vue */ 327))
   },
   uCellItem: function() {
-    return __webpack_require__.e(/*! import() | node-modules/uview-ui/components/u-cell-item/u-cell-item */ "node-modules/uview-ui/components/u-cell-item/u-cell-item").then(__webpack_require__.bind(null, /*! uview-ui/components/u-cell-item/u-cell-item.vue */ 327))
+    return __webpack_require__.e(/*! import() | node-modules/uview-ui/components/u-cell-item/u-cell-item */ "node-modules/uview-ui/components/u-cell-item/u-cell-item").then(__webpack_require__.bind(null, /*! uview-ui/components/u-cell-item/u-cell-item.vue */ 334))
   }
 }
 var render = function() {

@@ -14,6 +14,8 @@ var _uviewUi = _interopRequireDefault(__webpack_require__(/*! uview-ui */ 11));f
 _vue.default.use(_uviewUi.default);
 
 _vue.default.prototype.$webUrl = 'http://www.sunshine2020cc.cn:80';
+_vue.default.prototype.$imageUrl = 'http://www.sunshine2020cc.cn/getimage/';
+_vue.default.prototype.$htmlUrl = 'http://www.sunshine2020cc.cn/gethtml/';
 
 _App.default.mpType = 'app';
 

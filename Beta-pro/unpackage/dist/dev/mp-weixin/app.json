@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/issue/issue",
     "pages/login/login",
     "pages/test/test",
     "pages/my/my",
@@ -18,7 +19,6 @@
     "pages/home/authorpage",
     "pages/hole/index",
     "pages/hole/MyInfo/MyInfo",
-    "pages/issue/issue",
     "pages/my/collect/collect",
     "pages/my/info/info",
     "pages/my/enjoy/enjoy",
@@ -77,5 +77,6 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap50.json"
 }

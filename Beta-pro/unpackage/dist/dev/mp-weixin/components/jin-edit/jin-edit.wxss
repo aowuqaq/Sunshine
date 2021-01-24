@@ -8,11 +8,11 @@
 .ql-container.data-v-52149304 {
 	line-height: 160%;
 	font-size: 34rpx;
-	width: calc(100% - 60rpx); 
+	width: calc(100% - 60rpx);
 	height: auto;
 	margin: 0 auto;
 }
-.tool-view.data-v-52149304{
+.tool-view.data-v-52149304 {
 	width: 100vw;
 	position: fixed;
 	bottom: 0;
@@ -80,7 +80,7 @@
 .setting-layer .single .icon.data-v-52149304 {
 	margin-right: 20rpx;
 }
-.setting-layer-mask.data-v-52149304{
+.setting-layer-mask.data-v-52149304 {
 	position: fixed;
 	left: 0;
 	top: 0;
