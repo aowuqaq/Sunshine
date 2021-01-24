@@ -170,6 +170,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var _jsrsasign = __webpack_require__(/*! @/utils/jsrsasign.js */ 46);function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var _default =
 
 
@@ -181,6 +182,8 @@ var _jsrsasign = __webpack_require__(/*! @/utils/jsrsasign.js */ 46);function _d
       verifyCode: '',
       verifyCodeImageSrc: '',
       imageURL: '/static/back3.jpg',
+      timer: null,
+      second: 60,
       res: {
         statecode: '' } };
 
@@ -188,7 +191,7 @@ var _jsrsasign = __webpack_require__(/*! @/utils/jsrsasign.js */ 46);function _d
   },
   onLoad: function onLoad() {var _this = this;
     //判断是否有token
-    var token = uni.getStorageSync('token');
+    var token = uni.getStorageSync('usertoken');
     if (token === undefined || token === '') {
       uni.request({
         url: this.$webUrl + '/getverified?width=100&height=50&length=5',
@@ -196,6 +199,9 @@ var _jsrsasign = __webpack_require__(/*! @/utils/jsrsasign.js */ 46);function _d
         header: {},
         responseType: 'ArrayBuffer',
         success: function success(res) {
+          _this.timer = setInterval(function () {
+            this.second -= 1;
+          }, 1000);
           console.log(res);
           console.log(res.cookies[0]);
           _this.verifyCodeImageSrc = "data:image/png;base64," + uni.arrayBufferToBase64(res.data);
@@ -213,10 +219,13 @@ var _jsrsasign = __webpack_require__(/*! @/utils/jsrsasign.js */ 46);function _d
       var currentTimeStamp = Math.round(new Date() / 1000);
       // 判断token是否过期
       if (Number(currentTimeStamp) <= decodeTokenDataExp) {
-        uni.switchTab({
-          url: '/pages/home/home',
-          animationType: 'pop-in',
-          animationDuration: 200 });
+        // uni.switchTab({
+        // 	url: '/pages/home/home',
+        // 	animationType: 'pop-in',
+        // 	animationDuration: 200
+        // });
+        uni.redirectTo({
+          url: '/pages/test/test' });
 
       } else {
         uni.request({
@@ -276,6 +285,14 @@ var _jsrsasign = __webpack_require__(/*! @/utils/jsrsasign.js */ 46);function _d
           uni.showToast({
             title: '登陆成功',
             icon: 'success' });
+
+
+          uni.setStorage({
+            key: 'usertoken',
+            data: res.cookies[0].substring(6),
+            success: function success() {
+              console.log('setUserTokenSuccess!');
+            } });
 
 
           uni.switchTab({

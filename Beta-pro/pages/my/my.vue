@@ -67,13 +67,13 @@
 	export default {
 		data() {
 			return {
-				pic: 'https://uviewui.com/common/logo.png',
+				pic: '',
 				name: "sun",
-				show: true
+				show: true,
 			}
 		},
 		onLoad() {
-
+			uni.request({				url: 'http://www.sunshine2020cc.cn/getimage/test.png',				method: 'GET',				responseType:'ArrayBuffer',				header: {					'content-type':'application/json'				},				success: (res) => {					this.pic = "data:image/png;base64," + uni.arrayBufferToBase64(res.data);				}			})
 		},
 		methods: {
 			openMessage(){

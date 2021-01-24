@@ -10486,7 +10486,18 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 
-/***/ 394:
+/***/ 4:
+/*!***********************************************************!*\
+  !*** /Users/mo/代码集合/HBuilderProjects/Beta-pro/pages.json ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ 402:
 /*!**************************************************************************************************************!*\
   !*** /Users/mo/代码集合/HBuilderProjects/Beta-pro/node_modules/uview-ui/components/u-parse/libs/MpHtmlParser.js ***!
   \**************************************************************************************************************/
@@ -10500,9 +10511,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
  * @author JinYufeng
  * @listens MIT
  */
-var cfg = __webpack_require__(/*! ./config.js */ 395),
+var cfg = __webpack_require__(/*! ./config.js */ 403),
 blankChar = cfg.blankChar,
-CssHandler = __webpack_require__(/*! ./CssHandler.js */ 396),
+CssHandler = __webpack_require__(/*! ./CssHandler.js */ 404),
 windowWidth = uni.getSystemInfoSync().windowWidth;
 var emoji;
 
@@ -11077,7 +11088,7 @@ module.exports = MpHtmlParser;
 
 /***/ }),
 
-/***/ 395:
+/***/ 403:
 /*!********************************************************************************************************!*\
   !*** /Users/mo/代码集合/HBuilderProjects/Beta-pro/node_modules/uview-ui/components/u-parse/libs/config.js ***!
   \********************************************************************************************************/
@@ -11167,14 +11178,14 @@ module.exports = cfg;
 
 /***/ }),
 
-/***/ 396:
+/***/ 404:
 /*!************************************************************************************************************!*\
   !*** /Users/mo/代码集合/HBuilderProjects/Beta-pro/node_modules/uview-ui/components/u-parse/libs/CssHandler.js ***!
   \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var cfg = __webpack_require__(/*! ./config.js */ 395),
+var cfg = __webpack_require__(/*! ./config.js */ 403),
 isLetter = function isLetter(c) {return c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z';};
 
 function CssHandler(tagStyle) {
@@ -11274,17 +11285,6 @@ parser.prototype.Content = function () {
   this.list = [];
   this.state = this.Space;
 };
-
-/***/ }),
-
-/***/ 4:
-/*!***********************************************************!*\
-  !*** /Users/mo/代码集合/HBuilderProjects/Beta-pro/pages.json ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
 
 /***/ }),
 

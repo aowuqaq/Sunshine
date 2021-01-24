@@ -1,0 +1,1 @@
+<view><view data-event-opts="{{[['tap',[['testResquest',['$event']]]]]}}" class="root" bindtap="__e"><text>获取图片</text></view><view data-event-opts="{{[['tap',[['testUploadImg',['$event']]]]]}}" class="root" bindtap="__e"><text>上传图片</text></view><image src="{{resourcePath}}" alt class="_img"></image></view>

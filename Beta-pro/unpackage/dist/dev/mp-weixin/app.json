@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/login/login",
+    "pages/test/test",
     "pages/my/my",
     "pages/letter/docMessage/docMessage",
     "pages/letter/makeAppoint/makeAppoint",
@@ -76,6 +77,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap60.json"
+  "usingComponents": {}
 }

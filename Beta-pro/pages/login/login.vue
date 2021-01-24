@@ -18,6 +18,7 @@
 			<view class="in">验证码</view>
 			<input class="indo" type="text" placeholder="text..." placeholder-style="color:grey" v-model="verifyCode">
 			<image :src="verifyCodeImageSrc" class="verifyImage" @click="changeCodeImg()"></image>
+			<text id="timerController" class="timerController">{{second}}</text>
 		</view>
 
 		<view class="buttonBox">
@@ -49,6 +50,8 @@
 				verifyCode: '',
 				verifyCodeImageSrc: '',
 				imageURL: '/static/back3.jpg',
+				timer: null,
+				second: 60,
 				res: {
 					statecode: ''
 				}
@@ -56,7 +59,7 @@
 		},
 		onLoad() {
 			//判断是否有token
-			const token = uni.getStorageSync('token');
+			const token = uni.getStorageSync('usertoken');
 			if ((token === undefined) || (token === '')) {
 				uni.request({
 					url: this.$webUrl + '/getverified?width=100&height=50&length=5',
@@ -64,6 +67,9 @@
 					header: {},
 					responseType: 'ArrayBuffer',
 					success: (res) => {
+						this.timer = setInterval(function() {
+							this.second -= 1;
+						}, 1000)
 						console.log(res);
 						console.log(res.cookies[0]);
 						this.verifyCodeImageSrc = "data:image/png;base64," + uni.arrayBufferToBase64(res.data);
@@ -81,10 +87,13 @@
 				const currentTimeStamp = Math.round(new Date() / 1000);
 				// 判断token是否过期
 				if (Number(currentTimeStamp) <= decodeTokenDataExp) {
-					uni.switchTab({
-						url: '/pages/home/home',
-						animationType: 'pop-in',
-						animationDuration: 200
+					// uni.switchTab({
+					// 	url: '/pages/home/home',
+					// 	animationType: 'pop-in',
+					// 	animationDuration: 200
+					// });
+					uni.redirectTo({
+					    url: '/pages/test/test'
 					});
 				} else {
 					uni.request({
@@ -144,6 +153,14 @@
 							uni.showToast({
 								title: '登陆成功',
 								icon: 'success',
+							});
+							
+							uni.setStorage({
+								key: 'usertoken',
+								data: res.cookies[0].substring(6),
+								success: function() {
+									console.log('setUserTokenSuccess!');
+								}
 							});
 
 							uni.switchTab({

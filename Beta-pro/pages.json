@@ -9,6 +9,9 @@
 				"navigationBarTitleText": "登陆"
 			}
 		},{
+		    "path" : "pages/test/test",
+		    "style" : {}
+		},{
 			"path": "pages/my/my",
 			"style": {
 				"navigationBarTitleText": "个人"
