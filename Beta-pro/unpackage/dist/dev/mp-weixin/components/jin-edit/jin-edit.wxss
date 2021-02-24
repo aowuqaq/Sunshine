@@ -1,8 +1,7 @@
 
 .container.data-v-52149304 {
 	padding: 30rpx 0;
-	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
+	box-sizing: border-box;
 	padding-bottom: 120rpx;
 }
 .ql-container.data-v-52149304 {
@@ -55,10 +54,8 @@
 	background: #fff;
 	width: 250rpx;
 	right: 20rpx;
-	-webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-	        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-	-webkit-border-radius: 8rpx;
-	        border-radius: 8rpx;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+	border-radius: 8rpx;
 }
 .setting-layer .single.data-v-52149304 {
 	height: 80rpx;

@@ -47,7 +47,6 @@ page {
   width: 100%;
   height: 100rpx;
   border: 2rpx solid #B0C4DE;
-  -webkit-border-radius: 15rpx;
-          border-radius: 15rpx;
+  border-radius: 15rpx;
 }
 

@@ -4,29 +4,53 @@
 	},
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/issue/issue",
-			"style": {
-				"navigationBarTitleText": "我有一壶酒，你有你的故事吗"
-			}
-		},{
 			"path": "pages/login/login",
 			"style": {
 				"navigationBarTitleText": "登陆"
 			}
 		},{
-		    "path" : "pages/test/test",
-		    "style" : {}
-		},{
+			"path": "pages/test/test",
+			"style": {}
+		}, {
+			"path": "pages/letter/writeLetter/writeLetter",
+			"style": {
+				"navigationBarTitleText": "写信"
+			}
+		}, {
+			"path": "pages/hole/index",
+			"style": {
+				"navigationBarTitleText": "树洞"
+			}
+		},
+		{
+			"path": "pages/my/message/modifyInfo/modifyInfo",
+			"style": {}
+		}, {
+			"path": "pages/regist/regist",
+			"style": {
+				"navigationBarTitleText": "注册"
+			}
+		}, {
+			"path": "pages/my/message/message/message",
+			"style": {
+				"navigationBarTitleText": "个人资料"
+			}
+		},  {
+			"path": "pages/issue/issue",
+			"style": {
+				"navigationBarTitleText": "我有一壶酒，你有你的故事吗"
+			}
+		}, {
 			"path": "pages/my/my",
 			"style": {
 				"navigationBarTitleText": "个人"
 			}
-		},{
-		    "path" : "pages/letter/docMessage/docMessage",
-		    "style" : {}
-		},{
-		    "path" : "pages/letter/makeAppoint/makeAppoint",
-		    "style" : {}
+		}, {
+			"path": "pages/letter/docMessage/docMessage",
+			"style": {}
+		}, {
+			"path": "pages/letter/makeAppoint/makeAppoint",
+			"style": {}
 		},
 		{
 			"path": "pages/hole/MyHole/MyHole",
@@ -35,21 +59,9 @@
 			}
 		},
 		{
-			"path": "pages/my/message/message/message",
-			"style": {
-				"navigationBarTitleText": "个人资料"
-			}
-		},
-		{
 			"path": "pages/my/message/avatarSetting/avatarSetting",
 			"style": {
 				"navigationBarTitleText": "头像设置"
-			}
-		},
-		{
-			"path": "pages/regist/regist",
-			"style": {
-				"navigationBarTitleText": "注册"
 			}
 		},
 		{
@@ -92,12 +104,6 @@
 			"path": "pages/home/authorpage",
 			"style": {
 				"navigationBarTitleText": "作者页"
-			}
-		},
-		{
-			"path": "pages/hole/index",
-			"style": {
-				"navigationBarTitleText": "树洞"
 			}
 		},
 
@@ -155,21 +161,21 @@
 		}, {
 			"path": "pages/hole/ariticle/activity",
 			"style": {}
-		},{
+		}, {
 			"path": "pages/hole/ariticle/notice",
 			"style": {}
-		},{
+		}, {
 			"path": "pages/my/friend/friend",
 			"style": {}
-		},{
+		}, {
 			"path": "pages/my/set/set",
 			"style": {}
-		},{
+		}, {
 			"path": "pages/my/fans/fans",
 			"style": {}
 		}
-        
-    ],
+
+	],
 	"tabBar": {
 		"color": "#7A7E83",
 		"selectedColor": "#3cc51f",

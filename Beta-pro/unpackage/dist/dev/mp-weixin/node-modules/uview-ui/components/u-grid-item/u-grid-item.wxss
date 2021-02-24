@@ -14,8 +14,7 @@
 /* 颜色变量 */
 /* 行为相关颜色 */
 .u-grid-item.data-v-99a45d26 {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   background: #fff;
 
   display: -webkit-box;

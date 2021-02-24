@@ -1,14 +1,18 @@
 <template>
 	<view class="root">
 		<view class="windows-top">
-			<u-avatar :src="src" mode='square' size='large' @click="gotoAvatar"></u-avatar>
-			<view>
-				<text style="color: grey;">点击头像进行修改</text>
+			<view style="width: 350px;color: #C0C0C0;margin-bottom: 40px;">
+				<view @click="gotoModify">修改资料</view>
 			</view>
+			<u-avatar :src="src" mode='square' size='large' @click="gotoAvatar"></u-avatar>
 		</view>
 
 		<view class="windows-mid">
 			<view class="form-see">
+				<view class='table-unit'>
+					<text>昵称</text>
+					<text style="color: #C0C0C0;">{{name}}</text>
+				</view>
 				<view class='table-unit'>
 					<text>性别</text>
 					<text style="color: #C0C0C0;">{{sex}}</text>
@@ -40,6 +44,7 @@
 		data() {
 			return {
 				src: 'http://pic2.sc.chinaz.com/Files/pic/pic9/202002/hpic2119_s.jpg',
+				name:'Bob',
 				sex:'male',
 				acad:'本科',
 				job:'IT',
@@ -52,6 +57,11 @@
 				uni.navigateTo({
 				    url: '../avatarSetting/avatarSetting'
 				});
+			},
+			gotoModify(){
+				uni.navigateTo({
+					url:'../modifyInfo/modifyInfo'
+				})
 			}
 		}
 	}
@@ -101,4 +111,5 @@
 		align-items: start;
 		border-bottom:#3F536E solid 2rpx;
 	}
+	
 </style>

@@ -87,14 +87,14 @@
 				const currentTimeStamp = Math.round(new Date() / 1000);
 				// 判断token是否过期
 				if (Number(currentTimeStamp) <= decodeTokenDataExp) {
-					// uni.switchTab({
-					// 	url: '/pages/home/home',
-					// 	animationType: 'pop-in',
-					// 	animationDuration: 200
-					// });
-					uni.redirectTo({
-					    url: '/pages/test/test'
+					uni.switchTab({
+						url: '/pages/home/home',
+						animationType: 'pop-in',
+						animationDuration: 200
 					});
+					// uni.redirectTo({
+					//     url: '/pages/test/test'
+					// });
 				} else {
 					uni.request({
 						url: this.$webUrl + '/getverified?width=100&height=50&length=5',

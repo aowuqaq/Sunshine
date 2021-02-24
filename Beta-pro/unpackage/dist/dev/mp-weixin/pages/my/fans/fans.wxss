@@ -26,8 +26,7 @@ page {
 }
 .u-search-inner {
   background-color: #f4f4f4;
-  -webkit-border-radius: 100rpx;
-          border-radius: 100rpx;
+  border-radius: 100rpx;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;

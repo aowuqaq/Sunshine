@@ -2,74 +2,35 @@
 	<!--整体页面-->
 	<view class="all">
 		<!--顶部搜索框-->
-		<view class="title">
-			<view class="search">
-				<!--搜索框-->
-				<view>
-				</view>
-				<view>
-				</view>
-				<view>
-				</view>
-			</view>
-			<view class="serachblank">
-			</view>
-			<view class="cancel">
-				<!--取消-->
-			</view>
+		<view>
+			<u-search shape="round"></u-search>
 		</view>
 		<view class="total">
-			<view class="function">
-					<view class="letterwriting">
-						<!--写信-->
-						<text class="letter-text">写信</text>
-					</view>
-					<view class="booking">
-						<!--预约-->
-						<text>预约</text>
-					</view>
-			</view>
-			<!--岛屿来信-->
-			<text>岛屿来信</text>
-			<view class="islandletter">
-				<view class="islandletterfunction">
-					<!--岛屿来信功能-->
-					<view class="mailbox">
-						<view></view>
-						<view></view>
-						<view></view>
-					</view>
-					<view>
-						<view></view>
-						<view></view>
-						<view></view>
-					</view>
-					<view>
-						<view></view>
-						<view></view>
-						<view></view>
-					</view>
-				</view>
-			</view>
-			<!--医师预约-->
-			<view class="doctor">
+	<view class="wrap" >
+		<u-row gutter="16" justify="around">
+			<u-col span="4">
+				<view class="demo-layout bg-purple" @click="writeletter()">写信</view>
+			</u-col>
+			<u-col span="4">
+				<view class="demo-layout bg-purple" @click="appointment()">预约</view>
+			</u-col>
+		</u-row>
+	</view>
 
-				<view></view>
-				<view>
-					<!--医师预约功能-->
-					<view>
-						<view></view>
-						<view></view>
-						<view></view>
-					</view>
-					<view>
-						<view></view>
-						<view></view>
-						<view></view>
-					</view>
-				</view>
-			</view>
-			<view class="totalblank">
+			<!--岛屿来信-->
+	<view>
+	<u-cell-group title="岛屿来信">
+		<u-cell-item icon="setting-fill" title="信箱来信"></u-cell-item>
+		<u-cell-item icon="integral-fill" title="草稿箱"></u-cell-item>
+		<u-cell-item icon="integral-fill" title="历史信件"></u-cell-item>
+	</u-cell-group>
+	</view>
+			<!--医师预约-->
+			<view>
+	<u-cell-group title="医师预约">
+		<u-cell-item icon="setting-fill" title="心理师预约"></u-cell-item>
+		<u-cell-item icon="integral-fill" title="我的预约"></u-cell-item>
+	</u-cell-group>
 			</view>
 		</view>
 	</view>
@@ -90,6 +51,16 @@
 				uni.reLaunch({
 					url: '/pages/home/home'
 				});
+			},
+			appointment: function(){
+				uni.navigateTo({
+					url: '/pages/letter/makeAppoint/makeAppoint'
+				})
+			},
+			writeletter: function(){
+				uni.navigateTo({
+					url: '/pages/letter/writeLetter/writeLetter'
+				})
 			}
 		},
 	}
@@ -97,97 +68,21 @@
 
 <style>
 	@import "@/SCSS/global.scss";
-
-	.letter {
-		display: flex;
-		flex-flow: column nowrap;
-		justify-content: space-between;
-		height: 8vh;
+	.wrap {
+		padding: 24rpx;
 	}
 
-	.letterbutton {
-		background-color: rgba(206, 255, 206, 1);
-		width: 3vh;
-		height: 3vh;
-		align-self: center;
+	.u-row {
+		margin: 40rpx 0;
 	}
 
-	.lettertext {
-		width: 3vh;
-		height: 2vh;
-		line-height: 2vh;
-		color: rgba(206, 255, 206, 1);
-		font-size: 1vh;
-		text-align: center;
-		font-family: PingFangSC-regular;
+	.demo-layout {
+		height: 80rpx;
+		border-radius: 8rpx;
 	}
 
-	.title {
-		display: flex;
-		background-color: #C8C7CC;
-		flex-flow: row nowrap;
-		align-content: space-around;
+	.bg-purple {
+		background: #d3dce6;
 	}
 
-	.search {
-		flex: 9;
-		background-color: #007AFF;
-		display: inline-flex;
-	}
-
-	.serachblank {
-		flex: 1;
-	}
-
-	.cancel {
-		flex: 1;
-		background-color: red;
-	}
-
-	.total {
-		display: flex;
-		flex-flow: column nowrap;
-	}
-
-	.function {
-		flex: 7;
-		display: inline-flex;
-		flex-direction: row;
-		justify-content: center;
-		align-content: center;
-		background-color: #C0C0C0;
-	}
-	
-	.letterwriting{
-		flex: 5;
-		text-align: center;
-		background-color: purple;
-	}
-	
-	.booking{
-		flex: 5;
-		text-align: center;
-		background-color: #FFFF00;
-	}
-	
-	.islandletter {
-		flex: 13;
-		background-color: #2C405A;
-	}
-
-	.doctor {
-		flex: 9;
-		background-color: #4CD964;
-	}
-
-	.totalblank {
-		flex: 6;
-		background-color: #999999;
-	}
-	
-	.letter-text{
-		width: 80%;
-		height: 80%;
-		border: 2rpx solid #808080;
-	}
 </style>

@@ -47,7 +47,6 @@ page {
           align-items: center;
   border: 4rpx solid white;
   background-color: pink;
-  -webkit-border-radius: 15px;
-          border-radius: 15px;
+  border-radius: 15px;
 }
 

@@ -35,8 +35,7 @@
           justify-content: center;
 }
 .demo-warter {
-  -webkit-border-radius: 8px;
-          border-radius: 8px;
+  border-radius: 8px;
   margin: 5px;
   background-color: #ffffff;
   padding: 8px;
@@ -49,8 +48,7 @@
 }
 .demo-image {
   width: 100%;
-  -webkit-border-radius: 4px;
-          border-radius: 4px;
+  border-radius: 4px;
 }
 .demo-title {
   font-size: 30rpx;
@@ -73,8 +71,7 @@
   -webkit-align-items: center;
           align-items: center;
   padding: 4rpx 14rpx;
-  -webkit-border-radius: 50rpx;
-          border-radius: 50rpx;
+  border-radius: 50rpx;
   font-size: 20rpx;
   line-height: 1;
 }
@@ -82,8 +79,7 @@
   border: 1px solid #2979ff;
   color: #2979ff;
   margin-left: 10px;
-  -webkit-border-radius: 50rpx;
-          border-radius: 50rpx;
+  border-radius: 50rpx;
   line-height: 1;
   padding: 4rpx 14rpx;
   display: -webkit-box;

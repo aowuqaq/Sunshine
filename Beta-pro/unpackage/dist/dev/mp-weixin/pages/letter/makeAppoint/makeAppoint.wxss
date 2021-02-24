@@ -32,8 +32,7 @@ page {
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
           flex-direction: row;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   margin: 3% 0;
 }
 .unit-image {

@@ -80,8 +80,7 @@
 	width: 128rpx;
 	height: 128rpx;
 	margin: 20rpx;
-	-webkit-border-radius: 50%;
-	        border-radius: 50%;
+	border-radius: 50%;
 }
 .lists {
 	margin: 10px 0;
@@ -101,8 +100,7 @@ image {
 	        flex: 0 0 120rpx;
 	height: 120rpx;
 	margin-right: 20rpx;
-	-webkit-border-radius: 12rpx;
-	        border-radius: 12rpx;
+	border-radius: 12rpx;
 }
 .title {
 	text-align: left;

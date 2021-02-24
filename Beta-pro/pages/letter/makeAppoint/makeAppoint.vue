@@ -1,6 +1,6 @@
 <template>
 	<view class="root">
-		<view v-for="(item,index) in listarr" :key="index" class="unit-appoint">
+		<view v-for="(item,index) in listarr" :key="index" class="unit-appoint" @click="doctordata()">
 			<view class="unit-image">
 				<image src="http://pic2.sc.chinaz.com/Files/pic/pic9/202002/hpic2119_s.jpg" mode="aspectFit" style="width: 80%;"></image>
 			</view>
@@ -24,6 +24,14 @@
 				docname:"samuel",
 				doclevel:"国家一级心理咨询师"
 			};
+		},
+		
+		methods:{
+			doctordata: function(){
+				uni.navigateTo({
+					url: '/pages/letter/docMessage/docMessage'
+				})
+			}
 		}
 	}
 </script>

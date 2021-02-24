@@ -178,15 +178,15 @@
 				]
 			}
 		},
-		// onLoad() {
-		// 	this.addRandomData();
-		// },
+		onLoad() {
+			this.addRandomData();
+		},
 		// onReady() {
 		// 	this.addRandomData();
 		// },
-		onShow() {
-			this.addRandomData();
-		},
+		// onShow() {
+		// 	this.addRandomData();
+		// },
 		onReachBottom() {
 			this.loadStatus = 'loading';
 			// 模拟数据加载

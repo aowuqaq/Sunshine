@@ -1,15 +1,18 @@
 {
   "pages": [
-    "pages/issue/issue",
     "pages/login/login",
     "pages/test/test",
+    "pages/letter/writeLetter/writeLetter",
+    "pages/hole/index",
+    "pages/my/message/modifyInfo/modifyInfo",
+    "pages/regist/regist",
+    "pages/my/message/message/message",
+    "pages/issue/issue",
     "pages/my/my",
     "pages/letter/docMessage/docMessage",
     "pages/letter/makeAppoint/makeAppoint",
     "pages/hole/MyHole/MyHole",
-    "pages/my/message/message/message",
     "pages/my/message/avatarSetting/avatarSetting",
-    "pages/regist/regist",
     "pages/index/index",
     "pages/home/home",
     "pages/letter/letter",
@@ -17,7 +20,6 @@
     "pages/home/activity",
     "pages/home/search",
     "pages/home/authorpage",
-    "pages/hole/index",
     "pages/hole/MyInfo/MyInfo",
     "pages/my/collect/collect",
     "pages/my/info/info",
@@ -78,5 +80,5 @@
     ]
   },
   "usingComponents": {},
-  "sitemapLocation": "sitemap50.json"
+  "sitemapLocation": "sitemap52.json"
 }
